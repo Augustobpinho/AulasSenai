@@ -1,24 +1,73 @@
-package Entities;
+package Dados;
 
 public class Funcionario {
-	
-/*Faça um programa que tenha uma classe funcionário com os atributos nome, cargo, salario. 
-Verifique o salario e o cargo, se for gerente e ganhar menos que 5 mil, recebe um bônus 
-no salario de 1.5 % no valor do salario base, se for funcionário e ganhar menos que 1500 
-ganha 2% sobre o salario base. Mostre o valor do salario bruto atualizado e os dados do funcionário;
-*/
 
-	public String cargo;
-	public String nome;
-	public double salario;
+	private String nome;
+	private String departamento;
+	private String sexo;
+	private int idade;
+	protected double salario;
+
+
+	public Funcionario(String nome, String departamento, String sexo, int idade, double salario) {
+		super();
+		this.nome = nome;
+		this.departamento = departamento;
+		this.sexo = sexo;
+		this.idade = idade;
+		this.salario = salario;
+	}
 	
-	public void verificaComissao() {
-		if(cargo.equals("gerente") && salario < 5000) {
-			salario = salario + (salario * 0.015);
-		} 
-		if(cargo.equals("vendedor") && salario < 1500) {
-			salario = salario + (salario * 0.02);
-		}
-		System.out.println(salario);
+	public Funcionario() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public String getDepartamento() {
+		return departamento;
+	}
+	public void setDepartamento(String departamento) {
+		this.departamento = departamento;
+	}
+	public String getSexo() {
+		return sexo;
+	}
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
+	}
+	public int getIdade() {
+		return idade;
+	}
+	public void setIdade(int idade) {
+		this.idade = idade;
+	}
+	public double getSalario() {
+		return salario;
+	}
+	public double setSalario(double salario) {
+		return this.salario = salario;
+	}
+	
+	public void bonificacao() {
+		this.salario += 150.00;
+	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "Nome: " + nome
+		+ "\nIdade: " + idade
+		+"\nSexo: " + sexo
+		+ "\nDepartamento: " + departamento
+		+ "\nSalario: " + salario;
+		
 	}
 }
+
+

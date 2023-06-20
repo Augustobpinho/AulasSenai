@@ -2,22 +2,19 @@ package Dados;
 
 public class Gerente extends Funcionario {
 
-
-		
-		public Gerente(String nome, int idade, String sexo, String departamento, double salario, int bonificacao) {
-		super(nome, idade, sexo, departamento, salario);
 	
+	public Gerente() {
+		super();
+	}
+
+	public Gerente(String nome, String departamento, String sexo, int idade, double salario) {
+		super(nome, departamento, sexo, idade, salario);
+
 	}
 
 	@Override
-		
-		public void bonificacao(double salario) {
-			// TODO Auto-generated method stub
-			salario += salario + 500;
-		
-		int bonificacao = 500;
-		
-		salario = salario + bonificacao;
-		
-	}
+	public void bonificacao() {
+
+			this.salario += 500.00;
+		} 	
 }

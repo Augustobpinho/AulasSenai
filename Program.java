@@ -1,31 +1,29 @@
-package principal;
+package Principal;
 
-import java.util.Scanner;
-
-import Entities.Funcionario;
-
-// Atividade Reforço - Senai - Desenvolvedores Java - 05/06/2023
+import Dados.Funcionario;
+import Dados.Gerente;
+import Dados.Secretaria;
 
 public class Program {
 
 	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 
-		Funcionario funcionario = new Funcionario();
-		Scanner sc = new Scanner(System.in);
-		
-		System.out.println("Entre com o nome do funcionário: ");
-		funcionario.nome = sc.nextLine();
-		System.out.println("Entre com o cargo do funcionário: ");
-		funcionario.cargo = sc.nextLine();
-		System.out.println("Entre com o salario do funcionário: ");
-		funcionario.salario = sc.nextDouble();
-		
-		System.out.println("Salário: ");
-		funcionario.verificaComissao();
-		
-		sc.close();
-		
 
+	Funcionario funcionario = new Funcionario ("José", "Desenvolvimento", "M", 53, 10000);
+	Funcionario gerente = new Gerente("Janaina", "Gerente RH", "F", 20, 7500);
+	Funcionario secretaria = new Secretaria("Augusto", "Desenvolvedor", "M", 53, 1200);
+	
+	funcionario.bonificacao();
+	gerente.bonificacao();
+	secretaria.bonificacao();
+	
+	System.out.println(funcionario);
+	System.out.println(gerente);
+	System.out.println(secretaria);
+	
+
+		
 	}
 
 }
